@@ -44,7 +44,7 @@ window.addEventListener('DOMContentLoaded', event => {
         inputCode = '';
 
         setTimeout(() => {
-          window.open('https://open.appacademy.io/learn/js-py---sept-2021-cohort-1-online/week-9---browser--dom--events--and-storage/dom-elements', '_blank');
+          window.open('https://open.appacademy.io/learn/js-py---sept-2021-cohort-1-online/week-9---browser--dom--events--and-storage/element-selection-and-manipulation-objectives', '_blank');
         }, 500);
 
         setTimeout(() => {
