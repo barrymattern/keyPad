@@ -1,5 +1,4 @@
 .key-pad-container {
-  /* background-color: red; */
   height: 800px;
   width: 100%;
   display: flex;
@@ -9,7 +8,6 @@
 
 .key-pad__all-keys {
   background-color: rgb(80, 80, 80);
-  /* offset-x | offset-y | blur-radius | spread-radius | color */
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
   display: grid;
   grid-template-rows: repeat(4, 1fr);
@@ -44,7 +42,6 @@
   transform: translateX(1px) translateY(2px);
 }
 
-/* Adjust baseline of asterisk key */
 #asterisk {
   position: relative;
   top: 8px;
