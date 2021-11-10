@@ -17,19 +17,20 @@ window.addEventListener('DOMContentLoaded', event => {
   let inputCode = '';
 
   // Add 'click' eventListener to each individual key
-  allKeys.forEach(key => {
-    key.addEventListener('click', event => {
-      let fullId = event.target.id;
+  keyPad.addEventListener('click', event => {
+    const currentTarget = event.target
+    if (currentTarget.classList.value == 'key-pad__key'){
+      let fullId = currentTarget.id;
       let id = fullId[fullId.length - 1];
 
       inputCode += id;
 
       // Don't change key color if already red or green
-      if (key.style.backgroundColor === '') {
+      if (currentTarget.style.backgroundColor === '') {
         updateColors(keyPad, null,
-          key, 'lightGray', '2px 2px 3px 1px rgba(0, 0, 0, 0.2)', 'darkGray');
-      } else if (key.style.backgroundColor === 'green' ||
-        key.style.backgroundColor === 'red') {
+          currentTarget, 'lightGray', '2px 2px 3px 1px rgba(0, 0, 0, 0.2)', 'darkGray');
+      } else if (currentTarget.style.backgroundColor === 'green' ||
+        currentTarget.style.backgroundColor === 'red') {
         inputCode = '';
       }
 
@@ -80,6 +81,6 @@ window.addEventListener('DOMContentLoaded', event => {
           }, 1250);
         });
       }
-    });
-  });
+    }
+  })
 });
