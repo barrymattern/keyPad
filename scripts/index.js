@@ -46,17 +46,18 @@ window.addEventListener('DOMContentLoaded', event => {
 
         // When passcode is correct
       } else if (inputCode === PASSCODE) {
+        
+        // Open a/A-Open DOM curriculum in new window
+        setTimeout(() => {
+          window.open('https://open.appacademy.io/learn/js-py---sept-2021-cohort-1-online/week-9---browser--dom--events--and-storage/element-selection-and-manipulation-objectives', '_blank');
+        }, 500);
+
         allKeys.forEach(key => {
           // Set keyPad colors to green
           updateColors(keyPad, 'lightGreen',
             key, 'green', '2px 2px 5px 0px darkGreen', 'darkGreen');
 
           inputCode = '';
-
-          // Open a/A-Open DOM curriculum in new window
-          setTimeout(() => {
-            window.open('https://open.appacademy.io/learn/js-py---sept-2021-cohort-1-online/week-9---browser--dom--events--and-storage/element-selection-and-manipulation-objectives', '_blank');
-          }, 500);
 
           // Reset keyPad colors to original
           setTimeout(() => {
